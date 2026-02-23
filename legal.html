@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moesmp.net | Legal Documents</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8a2be2;
+            --primary-dark: #6a1cb0;
+            --primary-light: #9d4edd;
+            --secondary: #ff6b6b;
+            --accent: #00d4ff;
+            --success: #00ff9d;
+            --warning: #ffcc00;
+            --java: #ffaa00;
+            --bedrock: #55aa55;
+            
+            --dark: #0a0a0f;
+            --darker: #050508;
+            --light: #f0f0ff;
+            --gray: #1a1a24;
+            --light-gray: #2a2a34;
+            --glass: rgba(20, 15, 35, 0.85);
+            --glass-light: rgba(40, 35, 65, 0.95);
+            --gradient: linear-gradient(135deg, var(--primary) 0%, #9d4edd 50%, var(--accent) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--primary-dark) 0%, #7b2cbf 50%, #0097a7 100%);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.6);
+            --glow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--darker);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 0% 0%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 100% 0%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(157, 78, 221, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(255, 107, 107, 0.15) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(10, 10, 15, 0.8);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient);
+            border-radius: 6px;
+            border: 2px solid var(--darker);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+
+        .bg-grid {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image: 
+                linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 40s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-50px, -50px); }
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 15, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+            padding: 1.2rem 2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: var(--shadow);
+        }
+
+        header.scrolled {
+            padding: 0.8rem 2rem;
+            background: rgba(10, 10, 15, 0.95);
+        }
+
+        .nav-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        /* Logo with Animation */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--glow);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(200%) rotate(45deg); }
+        }
+
+        .logo-icon i {
+            font-size: 2rem;
+            color: white;
+            z-index: 1;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(138, 43, 226, 0.3);
+        }
+
+        .logo-text span {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        /* Enhanced Navigation */
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+            background: rgba(30, 25, 45, 0.9);
+            padding: 0.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            background: rgba(138, 43, 226, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
+        }
+
+        .nav-links a.active {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        .badge {
+            background: var(--accent);
+            color: var(--dark);
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            font-weight: 800;
+            margin-left: 0.3rem;
+            animation: pulse 2s infinite;
+        }
+
+        /* Server Status */
+        .server-status {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(0, 212, 255, 0.15);
+            border-radius: 12px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            min-width: 125px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .server-status:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background-color: var(--success);
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 0 10px var(--success);
+        }
+
+        .status-dot::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: var(--success);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: pulseDot 2s infinite;
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.2); opacity: 0.1; }
+        }
+
+        /* Enhanced Cart Button */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cart-btn {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 0.9rem 1.8rem;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .cart-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .cart-btn:hover::before {
+            left: 100%;
+        }
+
+        .cart-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cart-count {
+            background: var(--accent);
+            color: var(--dark);
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 900;
+            box-shadow: 0 2px 10px rgba(0, 212, 255, 0.3);
+        }
+
+        /* Hero Section for Legals */
+        .legal-hero {
+            padding: 14rem 2rem 4rem;
+            text-align: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.25) 0%, transparent 60%);
+            z-index: -1;
+            filter: blur(60px);
+        }
+
+        .legal-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--primary-light), var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            text-shadow: 0 5px 30px rgba(138, 43, 226, 0.3);
+            animation: fadeUp 1s ease;
+        }
+
+        .legal-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: rgba(240, 240, 255, 0.9);
+            animation: fadeUp 1s ease 0.2s both;
+            line-height: 1.8;
+        }
+
+        /* Main Legal Content */
+        .legal-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 8rem;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            position: relative;
+        }
+
+        @media (max-width: 1200px) {
+            .legal-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Legal Sidebar */
+        .legal-sidebar {
+            position: sticky;
+            top: 140px;
+            height: fit-content;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 2px solid rgba(138, 43, 226, 0.2);
+            box-shadow: var(--shadow);
+        }
+
+        .legal-sidebar-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .legal-nav {
+            list-style: none;
+        }
+
+        .legal-nav li {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-nav a {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.9rem 1.2rem;
+            color: #b8b5c3;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .legal-nav a:hover {
+            background: rgba(138, 43, 226, 0.15);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .legal-nav a.active {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+        }
+
+        .legal-nav i {
+            font-size: 1.1rem;
+            width: 20px;
+        }
+
+        /* Legal Content */
+        .legal-content {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 2px solid rgba(138, 43, 226, 0.2);
+            box-shadow: var(--shadow);
+        }
+
+        .legal-section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 120px;
+        }
+
+        .legal-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .legal-section h2 i {
+            font-size: 1.8rem;
+        }
+
+        .legal-section h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            color: white;
+        }
+
+        .legal-section h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.8rem;
+            color: #d0cce0;
+        }
+
+        .legal-section p {
+            margin-bottom: 1.2rem;
+            color: #b8b5c3;
+            line-height: 1.7;
+        }
+
+        .legal-section ul, .legal-section ol {
+            margin: 1.2rem 0 1.2rem 2rem;
+            color: #b8b5c3;
+            line-height: 1.7;
+        }
+
+        .legal-section li {
+            margin-bottom: 0.8rem;
+        }
+
+        .legal-section strong {
+            color: white;
+            font-weight: 600;
+        }
+
+        .legal-section a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .legal-section a:hover {
+            text-decoration: underline;
+            color: var(--primary-light);
+        }
+
+        /* Legal Info Cards */
+        .legal-info-card {
+            background: rgba(20, 15, 35, 0.6);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent);
+        }
+
+        .legal-info-card.warning {
+            border-left-color: var(--warning);
+            background: rgba(255, 204, 0, 0.05);
+        }
+
+        .legal-info-card.success {
+            border-left-color: var(--success);
+            background: rgba(0, 255, 157, 0.05);
+        }
+
+        .legal-info-card.primary {
+            border-left-color: var(--primary);
+            background: rgba(138, 43, 226, 0.05);
+        }
+
+        /* Legal Table */
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: rgba(20, 15, 35, 0.6);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .legal-table th {
+            background: rgba(138, 43, 226, 0.2);
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: white;
+            border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .legal-table td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #b8b5c3;
+        }
+
+        .legal-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .legal-table tr:hover {
+            background: rgba(138, 43, 226, 0.05);
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--gradient);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: var(--shadow);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Footer */
+        .legal-footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(138, 43, 226, 0.2);
+            margin-top: 4rem;
+            color: #b8b5c3;
+            font-size: 0.9rem;
+        }
+
+        .legal-footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .legal-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 1400px) {
+            .legal-hero h1 {
+                font-size: 3.5rem;
+            }
+            
+            .nav-links a {
+                padding: 0.8rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .legal-hero h1 {
+                font-size: 3rem;
+            }
+            
+            .nav-main {
+                order: 3;
+                flex: 0 0 100%;
+                margin-top: 1rem;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .legal-sidebar {
+                position: relative;
+                top: 0;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .legal-hero {
+                padding: 12rem 1rem 3rem;
+            }
+            
+            .legal-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            
+            .server-status {
+                display: none;
+            }
+            
+            .legal-content {
+                padding: 2rem;
+            }
+            
+            .legal-section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .legal-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .legal-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .legal-section h3 {
+                font-size: 1.3rem;
+            }
+            
+            .legal-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Print Styles */
+        @media print {
+            header, .legal-sidebar, .back-to-top, .legal-footer {
+                display: none;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .legal-hero, .legal-content {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                background: white;
+                color: black;
+            }
+            
+            .legal-section h2 {
+                color: black;
+            }
+            
+            .legal-section p, .legal-section li {
+                color: #333;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-grid"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="legal-hero" id="legal">
+        <h1>Legal Documents</h1>
+        <p>Important information about our Terms of Service, Privacy Policy, Refund Policy, and other legal agreements.</p>
+        <div style="display: inline-flex; align-items: center; gap: 1rem; background: rgba(138, 43, 226, 0.1); padding: 1rem 2rem; border-radius: 12px; border: 1px solid rgba(138, 43, 226, 0.3); margin-top: 1rem;">
+            <i class="fas fa-info-circle" style="color: var(--accent);"></i>
+            <div style="text-align: left;">
+                <div style="font-weight: 600; color: white;">Last Updated: Jan, 2026</div>
+                <div style="color: #b8b5c3; font-size: 0.9rem;">Please read these documents carefully</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Legal Content -->
+    <div class="legal-container">
+        <!-- Legal Sidebar -->
+        <aside class="legal-sidebar">
+            <div class="legal-sidebar-title">
+                <i class="fas fa-file-contract"></i>
+                Legal Documents
+            </div>
+            <ul class="legal-nav">
+                <li><a href="#terms" class="active"><i class="fas fa-scale-balanced"></i> Terms of Service</a></li>
+                <li><a href="#privacy"><i class="fas fa-shield-halved"></i> Privacy Policy</a></li>
+                <li><a href="#refund"><i class="fas fa-money-bill-wave"></i> Refund Policy</a></li>
+                <li><a href="#rules"><i class="fas fa-book"></i> Server Rules</a></li>
+                <li><a href="#cookie"><i class="fas fa-cookie-bite"></i> Cookie Policy</a></li>
+                <li><a href="#disclaimer"><i class="fas fa-exclamation-triangle"></i> Disclaimer</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Information</a></li>
+            </ul>
+            
+            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+                <div style="font-size: 0.9rem; color: #b8b5c3;">
+                    <p><i class="fas fa-clock"></i> Last Updated: Jan, 2026</p>
+                    <p style="margin-top: 0.5rem;"><i class="fas fa-user-shield"></i> Protecting your rights</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Legal Content -->
+        <main class="legal-content">
+            <!-- Terms of Service -->
+            <section id="terms" class="legal-section">
+                <h2><i class="fas fa-scale-balanced"></i> Terms of Service</h2>
+                
+                <div class="legal-info-card">
+                    <p><strong>Important:</strong> By accessing and using moesmp.net services, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access our services.</p>
+                </div>
+                
+                <h3>1. Acceptance of Terms</h3>
+                <p>Welcome to moesmp.net ("we," "our," or "us"). By accessing our Minecraft server, website, store, or any related services (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms").</p>
+                
+                <h3>2. Account Registration</h3>
+                <p>To access certain features of our Services, you may be required to register for an account. You agree to:</p>
+                <ul>
+                    <li>Provide accurate, current, and complete information during registration</li>
+                    <li>Maintain and promptly update your account information</li>
+                    <li>Maintain the security of your account credentials</li>
+                    <li>Accept responsibility for all activities that occur under your account</li>
+                    <li>Not create accounts for the purpose of violating these Terms</li>
+                </ul>
+                
+                <h3>3. User Conduct</h3>
+                <p>While using our Services, you agree not to:</p>
+                <ul>
+                    <li>Violate any applicable laws or regulations</li>
+                    <li>Infringe upon the intellectual property rights of others</li>
+                    <li>Harass, abuse, or harm other players</li>
+                    <li>Use cheats, exploits, automation software, or any unauthorized third-party software</li>
+                    <li>Distribute viruses or other harmful computer code</li>
+                    <li>Attempt to gain unauthorized access to our systems or other users' accounts</li>
+                    <li>Engage in any activity that disrupts or interferes with our Services</li>
+                </ul>
+                
+                <h3>4. Virtual Items and Purchases</h3>
+                <p>Our Services may offer virtual items for purchase, including but not limited to:</p>
+                <ul>
+                    <li><strong>Keys:</strong> Common, Prime, Gold, Amethyst, and Crimson keys</li>
+                    <li><strong>Subscriptions:</strong> Moe+ monthly subscription</li>
+                    <li><strong>Other digital content:</strong> As made available from time to time</li>
+                </ul>
+                
+                <p>All purchases are final and non-transferable. Virtual items have no real-world value and cannot be redeemed for cash. We reserve the right to modify, remove, or discontinue virtual items at any time.</p>
+                
+                <h3>5. Subscription Terms</h3>
+                <p>Moe+ subscriptions are billed monthly and automatically renew until canceled. You may cancel your subscription at any time through your account settings. Cancellation will take effect at the end of the current billing period.</p>
+                
+                <h3>6. Termination</h3>
+                <p>We reserve the right to suspend or terminate your access to our Services at our sole discretion, without notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties, or for any other reason.</p>
+                
+                <h3>7. Modifications to Terms</h3>
+                <p>We may modify these Terms at any time. We will notify users of material changes via our website or in-game announcements. Your continued use of our Services after changes become effective constitutes acceptance of those changes.</p>
+            </section>
+
+            <!-- Privacy Policy -->
+            <section id="privacy" class="legal-section">
+                <h2><i class="fas fa-shield-halved"></i> Privacy Policy</h2>
+                
+                <div class="legal-info-card success">
+                    <p><strong>Your privacy is important to us.</strong> This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Services.</p>
+                </div>
+                
+                <h3>1. Information We Collect</h3>
+                <p>We collect several types of information from and about users of our Services:</p>
+                
+                <h4>Personal Information</h4>
+                <ul>
+                    <li><strong>Account Information:</strong> Minecraft username, email address (if provided)</li>
+                    <li><strong>Payment Information:</strong> Processed securely through our payment provider (Sellauth)</li>
+                    <li><strong>Communication Data:</strong> Messages sent to our support team</li>
+                </ul>
+                
+                <h4>Automatically Collected Information</h4>
+                <ul>
+                    <li><strong>Usage Data:</strong> Server connection logs, playtime statistics</li>
+                    <li><strong>Technical Data:</strong> IP address, device information, browser type</li>
+                    <li><strong>Cookies and Tracking:</strong> See our <a href="#cookie">Cookie Policy</a> for details</li>
+                </ul>
+                
+                <h3>2. How We Use Your Information</h3>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Provide, maintain, and improve our Services</li>
+                    <li>Process transactions and send related information</li>
+                    <li>Send technical notices, updates, and security alerts</li>
+                    <li>Respond to comments, questions, and provide customer service</li>
+                    <li>Monitor and analyze trends, usage, and activities</li>
+                    <li>Detect, investigate, and prevent fraudulent transactions and other illegal activities</li>
+                </ul>
+                
+                <h3>3. Information Sharing and Disclosure</h3>
+                <p>We do not sell, trade, or rent your personal information to third parties. We may share information in the following circumstances:</p>
+                <ul>
+                    <li><strong>Service Providers:</strong> With vendors who provide services on our behalf</li>
+                    <li><strong>Legal Requirements:</strong> When required by law or to protect our rights</li>
+                    <li><strong>Business Transfers:</strong> In connection with a merger, sale, or acquisition</li>
+                </ul>
+                
+                <h3>4. Data Security</h3>
+                <p>We implement appropriate technical and organizational measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+                
+                <h3>5. Data Retention</h3>
+                <p>We retain your information for as long as necessary to provide our Services and for legitimate business purposes. When we no longer need to use your information, we will remove it from our systems.</p>
+                
+                <h3>6. Your Rights</h3>
+                <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+                <ul>
+                    <li>Access to your personal information</li>
+                    <li>Correction of inaccurate information</li>
+                    <li>Deletion of your information</li>
+                    <li>Restriction of processing</li>
+                    <li>Data portability</li>
+                    <li>Objection to processing</li>
+                </ul>
+                <p>To exercise these rights, please contact us using the information in the <a href="#contact">Contact Information</a> section.</p>
+                
+                <h3>7. Children's Privacy</h3>
+                <p>Our Services are not directed to children under 13. We do not knowingly collect personal information from children under 13. If we learn we have collected personal information from a child under 13, we will delete that information.</p>
+            </section>
+
+            <!-- Refund Policy -->
+            <section id="refund" class="legal-section">
+                <h2><i class="fas fa-money-bill-wave"></i> Refund Policy</h2>
+                
+                <div class="legal-info-card warning">
+                    <p><strong>Important:</strong> Due to the digital nature of our products, all sales are final. Please read this policy carefully before making a purchase.</p>
+                </div>
+                
+                <h3>1. Digital Products Policy</h3>
+                <p>All virtual items, keys, and subscriptions purchased on moesmp.net are digital products delivered instantly. As such, we do not offer refunds except in the following circumstances:</p>
+                
+                <h3>2. Eligibility for Refunds</h3>
+                <p>Refunds may be considered in the following cases:</p>
+                <table class="legal-table">
+                    <thead>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Refund Eligibility</th>
+                            <th>Required Documentation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Duplicate purchase</td>
+                            <td>Full refund for duplicate</td>
+                            <td>Proof of duplicate transaction</td>
+                        </tr>
+                        <tr>
+                            <td>Technical issues preventing delivery</td>
+                            <td>Full refund if unresolved</td>
+                            <td>Technical logs/screenshots</td>
+                        </tr>
+                        <tr>
+                            <td>Unauthorized purchase</td>
+                            <td>Full refund after verification</td>
+                            <td>Payment provider dispute details</td>
+                        </tr>
+                        <tr>
+                            <td>Mistaken purchase</td>
+                            <td>Case-by-case basis</td>
+                            <td>Purchase details and explanation</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>3. Non-Refundable Items</h3>
+                <p>The following are explicitly non-refundable:</p>
+                <ul>
+                    <li>Virtual items that have been claimed or used in-game</li>
+                    <li>Partial periods of subscriptions</li>
+                    <li>Purchases made more than 14 days ago</li>
+                    <li>Items purchased during sales or promotions</li>
+                    <li>Change of mind or accidental purchases (unless within 1 hour)</li>
+                </ul>
+                
+                <h3>4. Refund Process</h3>
+                <p>To request a refund:</p>
+                <ol>
+                    <li>Contact our support team within 7 days of purchase</li>
+                    <li>Provide your Minecraft username and transaction ID</li>
+                    <li>Explain the reason for your refund request</li>
+                    <li>Provide any supporting documentation</li>
+                </ol>
+                <p>Refund decisions are made at our sole discretion and typically processed within 7-14 business days.</p>
+                
+                <h3>5. Chargebacks</h3>
+                <p>Unauthorized chargebacks or payment disputes will result in:</p>
+                <ul>
+                    <li>Immediate suspension of your account</li>
+                    <li>Revocation of all purchased items</li>
+                    <li>Permanent ban from our Services</li>
+                    <li>Possible legal action to recover losses</li>
+                </ul>
+                <p>If you have an issue with a purchase, please contact us directly rather than initiating a chargeback.</p>
+                
+                <h3>6. Subscription Cancellations</h3>
+                <p>Moe+ subscriptions can be canceled at any time through your account settings. Cancellation will prevent future billing but will not result in a refund for the current billing period.</p>
+            </section>
+
+            <!-- Server Rules -->
+            <section id="rules" class="legal-section">
+                <h2><i class="fas fa-book"></i> Server Rules</h2>
+                
+                <div class="legal-info-card primary">
+                    <p><strong>These rules apply to all players on moesmp.net.</strong> Violations may result in warnings, temporary bans, or permanent bans depending on severity.</p>
+                </div>
+                
+                <h3>1. General Conduct</h3>
+                <ul>
+                    <li><strong>Respect All Players:</strong> No harassment, bullying, hate speech, or discrimination</li>
+                    <li><strong>Appropriate Language:</strong> Keep chat clean and family-friendly</li>
+                    <li><strong>No Spamming:</strong> Avoid excessive messages, commands, or chat flooding</li>
+                    <li><strong>English Only:</strong> Main chat must be in English for moderation purposes</li>
+                    <li><strong>No Advertising:</strong> Do not advertise other servers, websites, or services</li>
+                </ul>
+                
+                <h3>2. Gameplay Rules</h3>
+                <ul>
+                    <li><strong>No Griefing:</strong> Do not destroy or modify others' builds without permission</li>
+                    <li><strong>No Stealing:</strong> Respect other players' items and builds</li>
+                    <li><strong>No Cheating:</strong> Any form of cheating or exploiting is prohibited</li>
+                    <li><strong>No Hacked Clients:</strong> Only use official Minecraft clients</li>
+                    <li><strong>Fair PvP:</strong> Follow PvP rules in designated areas only</li>
+                    <li><strong>No Lag Machines:</strong> Do not create intentional server lag</li>
+                </ul>
+                
+                <h3>3. Building Guidelines</h3>
+                <ul>
+                    <li><strong>Appropriate Builds:</strong> No offensive, inappropriate, or explicit structures</li>
+                    <li><strong>Respect Spawn:</strong> Keep spawn area clean and accessible</li>
+                    <li><strong>No Excessive Entities:</strong> Limit mob farms and item frames</li>
+                    <li><strong>Claim Your Land:</strong> Use protection plugins to secure your builds</li>
+                </ul>
+                
+                <h3>4. Account Responsibility</h3>
+                <ul>
+                    <li><strong>Your Account:</strong> You are responsible for all actions on your account</li>
+                    <li><strong>No Account Sharing:</strong> Do not share your account with others</li>
+                    <li><strong>One Account Per Player:</strong> Multiple accounts are not allowed</li>
+                    <li><strong>No Impersonation:</strong> Do not impersonate staff or other players</li>
+                </ul>
+                
+                <h3>5. Consequences</h3>
+                <p>Violations may result in:</p>
+                <table class="legal-table">
+                    <thead>
+                        <tr>
+                            <th>Violation Level</th>
+                            <th>First Offense</th>
+                            <th>Repeat Offense</th>
+                            <th>Severe Violation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Minor</td>
+                            <td>Warning</td>
+                            <td>1-3 day ban</td>
+                            <td>7 day ban</td>
+                        </tr>
+                        <tr>
+                            <td>Moderate</td>
+                            <td>1-3 day ban</td>
+                            <td>7-14 day ban</td>
+                            <td>30 day ban</td>
+                        </tr>
+                        <tr>
+                            <td>Major</td>
+                            <td>7-30 day ban</td>
+                            <td>Permanent ban</td>
+                            <td>Permanent IP ban</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>6. Appeal Process</h3>
+                <p>If you believe you were unfairly punished:</p>
+                <ol>
+                    <li>Join our Discord server</li>
+                    <li>Submit an appeal in the appropriate channel</li>
+                    <li>Provide your Minecraft username and ban details</li>
+                    <li>Explain why you believe the punishment was unfair</li>
+                    <li>Wait for staff review (typically 3-7 days)</li>
+                </ol>
+            </section>
+
+            <!-- Cookie Policy -->
+            <section id="cookie" class="legal-section">
+                <h2><i class="fas fa-cookie-bite"></i> Cookie Policy</h2>
+                
+                <h3>1. What Are Cookies</h3>
+                <p>Cookies are small text files that are placed on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and understanding how you use our site.</p>
+                
+                <h3>2. How We Use Cookies</h3>
+                <p>We use cookies for the following purposes:</p>
+                
+                <table class="legal-table">
+                    <thead>
+                        <tr>
+                            <th>Cookie Type</th>
+                            <th>Purpose</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Essential Cookies</strong></td>
+                            <td>Required for basic site functionality</td>
+                            <td>Session</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Preference Cookies</strong></td>
+                            <td>Remember your settings and preferences</td>
+                            <td>1 year</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Analytics Cookies</strong></td>
+                            <td>Help us understand how visitors use our site</td>
+                            <td>2 years</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Security Cookies</strong></td>
+                            <td>Support security features and detect malicious activity</td>
+                            <td>Session</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>3. Third-Party Cookies</h3>
+                <p>We may also use cookies from trusted third parties, including:</p>
+                <ul>
+                    <li><strong>Google Analytics:</strong> For website analytics</li>
+                    <li><strong>Payment Processors:</strong> For secure payment processing</li>
+                    <li><strong>Advertising Networks:</strong> To display relevant ads (if applicable)</li>
+                </ul>
+                
+                <h3>4. Managing Cookies</h3>
+                <p>You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. However, if you do this, you may have to manually adjust some preferences every time you visit a site and some services and functionalities may not work.</p>
+                
+                <h3>5. Your Choices</h3>
+                <p>Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set and how to manage and delete them, visit <a href="https://www.allaboutcookies.org" target="_blank">www.allaboutcookies.org</a>.</p>
+            </section>
+
+            <!-- Disclaimer -->
+            <section id="disclaimer" class="legal-section">
+                <h2><i class="fas fa-exclamation-triangle"></i> Disclaimer</h2>
+                
+                <div class="legal-info-card warning">
+                    <p><strong>Disclaimer of Warranties:</strong> Our Services are provided "as is" and "as available" without warranties of any kind, either express or implied.</p>
+                </div>
+                
+                <h3>1. Service Availability</h3>
+                <p>We do not guarantee that our Services will be available at all times, uninterrupted, or error-free. We may suspend or withdraw or restrict the availability of all or any part of our Services for business and operational reasons.</p>
+                
+                <h3>2. Limitation of Liability</h3>
+                <p>To the fullest extent permitted by applicable law, in no event will moesmp.net, its affiliates, or their licensors, service providers, employees, agents, officers, or directors be liable for damages of any kind, under any legal theory, arising out of or in connection with your use, or inability to use, our Services.</p>
+                
+                <h3>3. Minecraft Disclaimer</h3>
+                <p>moesmp.net is an independent Minecraft server and is not affiliated with Mojang AB, Microsoft Corporation, or any of their affiliates. Minecraft is a trademark of Mojang AB.</p>
+                
+                <h3>4. Third-Party Links</h3>
+                <p>Our Services may contain links to third-party websites or services that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.</p>
+                
+                <h3>5. User-Generated Content</h3>
+                <p>We are not responsible for any user-generated content on our Services. Users are solely responsible for their own content and the consequences of posting or publishing it.</p>
+                
+                <h3>6. Updates and Changes</h3>
+                <p>We reserve the right to make changes to our Services, including virtual items, features, and gameplay mechanics, at any time without prior notice.</p>
+            </section>
+
+            <!-- Contact Information -->
+            <section id="contact" class="legal-section">
+                <h2><i class="fas fa-envelope"></i> Contact Information</h2>
+                
+                <div class="legal-info-card success">
+                    <p><strong>Need help or have questions?</strong> We're here to assist you with any concerns regarding our legal documents or Services.</p>
+                </div>
+                
+                <h3>1. General Inquiries</h3>
+                <p>For general questions about our Services:</p>
+                <ul>
+                    <li><strong>Discord:</strong> Join our Discord server (link on homepage)</li>
+                </ul>
+                
+                <h3>2. Legal Inquiries</h3>
+                <p>For legal matters, DMCA takedown requests, or law enforcement inquiries:</p>
+                <ul>
+                    <li><strong>Legal Contact:</strong> support@moesmp.net</li>
+                    <li><strong>Response Time:</strong> Within 7 business days</li>
+                </ul>
+                
+                <h3>3. Abuse Reports</h3>
+                <p>To report abuse, harassment, or violations of our rules:</p>
+                <ul>
+                    <li><strong>In-Game:</strong> Use /report command</li>
+                    <li><strong>Discord:</strong> Submit a ticket in our Discord server</li>
+                    <li><strong>Email:</strong> report@moesmp.net</li>
+                </ul>
+                
+                <h3>4. Response Times</h3>
+                <p>We strive to respond to all inquiries promptly:</p>
+                <ul>
+                    <li><strong>General Support:</strong> 24-48 hours</li>
+                    <li><strong>Payment Issues:</strong> 48-72 hours</li>
+                    <li><strong>Legal Matters:</strong> 5-7 business days</li>
+                    <li><strong>Weekends/Holidays:</strong> Responses may be delayed</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer class="legal-footer">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p>© 2024 moesmp.net. All rights reserved.</p>
+            <p style="margin-top: 1rem; font-size: 0.85rem;">
+                moesmp.net is not affiliated with Mojang AB, Microsoft Corporation, or any of their affiliates. 
+                Minecraft is a trademark of Mojang AB.
+            </p>
+            <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <a href="#terms">Terms of Service</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#refund">Refund Policy</a>
+                <a href="#rules">Server Rules</a>
+                <a href="#cookie">Cookie Policy</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p style="margin-top: 2rem; color: #8a7ca3; font-size: 0.8rem;">
+                This document was last updated on Jan, 2026. Previous versions are available upon request.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize cart count
+        let cart = JSON.parse(localStorage.getItem('moesmp_cart')) || [];
+        let totalItems = 0;
+        cart.forEach(item => {
+            totalItems += item.quantity || 1;
+        });
+        document.querySelector('.cart-count').textContent = totalItems;
+        
+        // Header scroll effect
+        const header = document.getElementById('mainHeader');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Show/hide back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+            
+            // Update active sidebar link
+            updateActiveSidebarLink();
+        });
+        
+        // Back to top button
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Update active state in sidebar
+                    document.querySelectorAll('.legal-nav a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Scroll to section
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Update active sidebar link based on scroll position
+        function updateActiveSidebarLink() {
+            const sections = document.querySelectorAll('.legal-section');
+            const sidebarLinks = document.querySelectorAll('.legal-nav a');
+            
+            let currentSection = '';
+            const scrollPosition = window.scrollY + 150;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = '#' + section.getAttribute('id');
+                }
+            });
+            
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // Print functionality
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                alert('For best printing results, use the print function in your browser menu.');
+            }
+        });
+        
+        // Initialize
+        updateActiveSidebarLink();
+        
+        // Add floating particles effect
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.position = 'fixed';
+            particle.style.width = Math.random() * 4 + 2 + 'px';
+            particle.style.height = particle.style.width;
+            particle.style.background = `rgba(${Math.random() * 100 + 155}, ${Math.random() * 100 + 155}, 255, ${Math.random() * 0.3 + 0.1})`;
+            particle.style.borderRadius = '50%';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.top = '-10px';
+            particle.style.zIndex = '-1';
+            particle.style.pointerEvents = 'none';
+            document.body.appendChild(particle);
+            
+            const animation = particle.animate([
+                { transform: 'translateY(0) translateX(0)', opacity: 1 },
+                { transform: `translateY(${window.innerHeight + 10}px) translateX(${Math.random() * 100 - 50}px)`, opacity: 0 }
+            ], {
+                duration: Math.random() * 3000 + 2000,
+                easing: 'cubic-bezier(0, 0.8, 0.2, 1)'
+            });
+            
+            animation.onfinish = () => {
+                particle.remove();
+                createParticle();
+            };
+        }
+        
+        // Create initial particles
+        for (let i = 0; i < 15; i++) {
+            setTimeout(() => createParticle(), i * 300);
+        }
+        
+        // Collapsible sections for mobile
+        const sidebarTitle = document.querySelector('.legal-sidebar-title');
+        const legalNav = document.querySelector('.legal-nav');
+        
+        if (window.innerWidth <= 1200) {
+            sidebarTitle.style.cursor = 'pointer';
+            sidebarTitle.addEventListener('click', () => {
+                legalNav.style.display = legalNav.style.display === 'none' ? 'block' : 'none';
+            });
+        }
+        
+        // Update sidebar on resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 1200) {
+                sidebarTitle.style.cursor = 'pointer';
+                legalNav.style.display = 'block';
+            } else {
+                sidebarTitle.style.cursor = 'default';
+                legalNav.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
